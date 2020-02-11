@@ -1,4 +1,4 @@
-FROM koder/apache-php-5.3:1.0.0
+FROM koder/apache-php-5.3:latest
 
 LABEL org.label-schema.schema-version="1.0" \
     org.label-schema.name="Apache with PHP 5 Docker Image" \
