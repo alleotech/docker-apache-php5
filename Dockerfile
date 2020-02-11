@@ -9,7 +9,7 @@ LABEL org.label-schema.schema-version="1.0" \
 MAINTAINER AlleoTech <admin@alleo.tech>
 
 # Install extra goodies
-RUN apt-get -y install mysql-client php5-geoip
+RUN apt-get update && apt-get -y install mysql-client php5-geoip
 
 # Enable mod_rewrite Apache module
 RUN a2enmod rewrite
