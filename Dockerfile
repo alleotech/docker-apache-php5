@@ -9,11 +9,14 @@ LABEL org.label-schema.schema-version="1.0" \
 MAINTAINER AlleoTech <admin@alleo.tech>
 
 # Install extra goodies
-RUN apt-get update && apt-get -y install mysql-client php5-geoip
+RUN echo "Installing extra goodies"
+RUN apt-get update && apt-get -y install mysql-client php5-geoip && echo "DONE"
 
 # Enable mod_rewrite Apache module
-RUN a2enmod rewrite
+RUN echo "Enabling mod_rewrite"
+RUN a2enmod rewrite && echo "DONE"
 
 # Restart Apache service
-RUN service apache2 restart
+RUN echo "Restarting Apache service"
+RUN service apache2 restart && echo "DONE"
 
